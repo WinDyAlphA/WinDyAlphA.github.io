@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="autres.css" />
+    <link rel="stylesheet" href="checkbox.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="pres.css" />
+    <link rel="stylesheet" href="questions.css" />
+    <link rel="stylesheet" href="template.css" />
+    <title>Contactez-nous</title>
+    <link rel="shortcut icon" href="images/logos/icons/msghover.ico" type="image/x-icon" />
+    <script src="formulaire.js"></script>
+</head>
+<body>
+   <header>
+      <div class="flex-nav">
+        <div>
+          <img class="menuphoto" src="images/photo_menu.png" />
+        </div>
+        <ul class="horizontalmenu">
+          <li class="menu">
+            <a href="complementaire.html" class="redirection">
+              <img class="hiddenmenu" src="images/logos/comphover.png"><p>Complémentaires</p></a>
+          </li>          
+          <li class="menu">
+            <a class="redirection" href="pres.html"><img class="hiddenmenu" src="images/logos/presnohover.png"><p>Présentation</p></a>
+          </li>
+          <li class="menu-act">
+            <a href="contact.html" class="redirection"><img class="hiddenmenu" src="images/logos/msgnohover.png"><p>Contactez-nous</p></a>
+          </li>
+          <li class="menu">
+            <a href="qcm.html" class="redirection"><img class="hiddenmenu" src="images/logos/qcmnohover.png"><p>QCM</p></a>
+          </li>
+        </ul>
+        <div class="align"></div>
+      </div>
+    </header>
+    
+    <main>
+        <div class="formulaire">
+            <h1>Formulaire de contact</h1>
+            <h3 class="remplissage">Si vous souhaitez nous informer sur un point ou donner votre avis sur ce site web en général ou même<br> sur 
+            le QCM, vous pouvez nous l'envoyer ici.<br>
+            Pour cela, c'est très simple : <br> -Rentrez le nom / pseudonyme sous lequel vous enverrez le message<br>
+            -Rentrez votre adresse mail<br>
+            -Rentrez simplement votre message :) !</h3>
+            <form name="myForm" action="form.php" onsubmit="return validateForm()" method="post">
+               <table class="form-style">
+                  <tr>
+                     <td>
+                        <label>
+                           Votre nom <span class="required">*</span>
+                        </label>
+                     </td>
+                     <td>
+                        <input type="text" name="name" class="long"/>
+                        <span class="error" id="errorname"></span>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label>
+                           Votre adresse e-mail <span class="required">*</span>
+                        </label>
+                     </td>
+                     <td>
+                        <input type="email" name="email" class="long"/>
+                        <span class="error" id="erroremail"></span>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label>
+                           Message <span class="required">*</span>
+                        </label>
+                     </td>
+                     <td>
+                        <textarea name="message" class="long field-textarea"></textarea>
+                        <span class="error" id="errormsg"></span>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td></td>
+                     <td>
+                        <input type="submit" value="Envoyer">      
+                        <input type="reset" value="Réinitialiser"> 
+                     </td>
+                  </tr>
+               </table>
+            </form>
+        </div>
+
+    </main>
+    <footer>
+        <h3>© Tous droits réservés, le-but.fr</h3>
+    </footer>
+</body>
+</html>
